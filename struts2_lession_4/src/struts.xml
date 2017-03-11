@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<package name="defalut" extends="struts-default" namespace="/">
+		<action name="user_allEmp" class="com.hp.action.UserAction" method="allEmp">
+			<result name="allemp">/allemp.jsp</result>
+		</action>
+		
+		<action name="user_addEmp" class="com.hp.action.UserAction" method="addEmp">
+			<!-- 
+				如果result 不写type 默认是请求转发(可以带参数，只能访问jsp界面)
+				如果type="redirect" 默认是重定向 (不能带参数,并且可以访问后台的控制器)
+		 	-->
+			<result name="allemp" type="redirect">/user_allEmp</result>
+		</action>
+	</package>
+</struts>    
