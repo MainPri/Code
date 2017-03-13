@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<package name="default" namespace="/" extends="struts-default">
+		<action name="all_pro" class="com.zuozhekun.action.ProAction" method="all">
+			<result name="allPro">/allPro.jsp</result>
+		</action>
+		<!-- 删除 -->
+		<action name="del_Pro" class="com.zuozhekun.action.ProAction" method="del">
+			<result name="allPro">/allPro.jsp</result>
+		</action>
+		<!-- 添加 -->
+		<action name="add_Pro" class="com.zuozhekun.action.ProAction" method="add">
+			<result name="allPro">/allPro.jsp</result>
+		</action>
+		<!-- 修改 -->
+		<action name="sel_Pro" class="com.zuozhekun.action.ProAction" method="select">
+			<result name="updatePro">/updatePro.jsp</result>
+		</action>  
+		
+		<action name="update_Pro" class="com.zuozhekun.action.ProAction" method="update">
+			<result name="allPro">/allPro.jsp</result>
+		</action>  
+		
+	</package>
+</struts>    
